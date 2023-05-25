@@ -11,50 +11,44 @@
 <body>
 
     <header>
-        <nav>
-            <div class="top-bar">
-                <div class="logo">
-                    <h1>pdfViewer-byEdu</h1>
-                </div>
-                <div class="nav-items">
-                    <ul>
-                        <li>
-                            <div class="nav-item-file-picker">
-                                <label for="audioFileInput">
-                                    <i class="fa-regular fa-file-audio"></i>
-                                </label>
-                                <input type="file" name="audioLoader" id="audioFileInput">
-                                <audio controls id="audioPlayer"></audio>
-                            </div>
-                        </li>
-                        <li>
-                            <label for="pdf-file">
-                                <i class="fa-regular fa-file-audio"></i>
-                            </label>
-                            <input type="file" id="pdf-file" accept=".pdf">
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar">
+            <h1 class="logo">pdfViewer-byEdu</h1>
+            <ul class="nav-menu">
+                <li class="nav-item whiteboard" onclick="togglePDF()">
+                    <i class="fa-solid fa-chalkboard"></i>
+                </li>
+                <li class="nav-item">
+                    <!-- Form para carregar o arquivo de áudio -->
+                    <form>
+                        <label for="audioFileInput">
+                            <span>Audio</span>
+                            <i class="fa-solid fa-play"></i>
+                            <i id="change-audio-icon" class="fa-solid fa-rotate"></i>
+                            <audio controls id="audioPlayer"></audio>
+                        </label>
+                        <input type="file" name="audioLoader" id="audioFileInput">
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <!-- Form para carregar arquivo PDF -->
+                    <form>
+                        <label class="pdf-label" for="pdf-file">
+                            <span>PDF</span>
+                            <i class="fa-solid fa-file"></i>
+                        </label>
+                        <input type="file" id="pdf-file" accept=".pdf">
+                    </form>
+                </li>
+            </ul>
         </nav>
     </header>
 
-
-
     <main>
-        <div class="container">
-
+        <div id="blank-page">
+            <embed src="document.pdf" type="application/pdf" width="100%" height="100%">
         </div>
+        <div class="container"></div>
     </main>
-
-
-
-
-    <div id="pdf-container">
-        <object id="pdf-object" type="application/pdf" width="100%" height="100%">
-            <p>No PDF file selected.</p>
-        </object>
-    </div>
 
 <script src="audioPlayer.js"></script>
 </body>
