@@ -36,14 +36,28 @@ embed {
     position: relative;
 }
 
+.title-and-holder {
+    display: flex;
+    align-items: center;
+}
+
+.title-and-holder select {
+    margin-left: 2rem;
+}
+
 .nav-menu {
     display: flex;
     align-items: center;
     padding: 0;
 }
 
-.nav-item i {
+.nav-item {
     margin-left: 1rem;
+}
+
+.nav-item span {
+    padding: 5px;
+    border: 1px solid white;
 }
 
 label {
