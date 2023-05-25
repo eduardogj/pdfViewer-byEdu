@@ -1,5 +1,7 @@
 # pdfViewer-byEdu
 
+# https://eduardogj.github.io/pdfViewer-byEdu/
+
 Esse site tem um uso muito específico para mim, mas pode ser utilizado abertamente por pessoas que precisam dessas funções ou querem adicionar coisas novas.
 
 Eu também sou professor particular de inglês e utilizo muito arquivos PDF e áudios nas aulas. Aí começa o problema: nunca consegui encontrar uma ferramenta de áudio conferência que pudesse me deixar compartilhar a tela do PDF juntamente com a transmissão do áudio.
