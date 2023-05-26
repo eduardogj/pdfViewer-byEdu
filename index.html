@@ -10,9 +10,6 @@
 </head>
 <body>
 
-    <div id="videoContainer">
-
-    </div>
     <header>
         <nav class="navbar">
             <div class="title-and-holder">
@@ -48,10 +45,10 @@
                 <li class="nav-item">
                     <!-- Form para carregar o arquivo de áudio -->
                     <form>
-                        <label for="fileInputVideo">
+                        <label for="videoFileInput">
                             <span>Video</span>
                         </label>
-                        <input type="file" name="videoLoader" id="fileInputVideo">
+                        <input type="file" name="videoLoader" id="videoFileInput">
                     </form>
                 </li>
             </ul>
@@ -62,9 +59,12 @@
         <div id="blank-page">
             <embed src="document.pdf" type="application/pdf" width="100%" height="100%">
         </div>
-        <div class="container"></div>
+        <div id="container" class="container"></div>
+        <div id="videoContainer"></div>
     </main>
 
 <script src="audioPlayer.js"></script>
+<script src="pdfReader.js"></script>
+<script src="videoPlayer.js"></script>
 </body>
 </html>

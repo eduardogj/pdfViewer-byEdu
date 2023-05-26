@@ -94,3 +94,25 @@ input[type="file"] {
     cursor: pointer;
     visibility: hidden;
 }
+
+.closeVideoBtn {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+
+.videoContainer {
+    display: none;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    margin: auto;
+}
+
+.closeVideoBtn {
+    position: absolute;
+    right: 0;
+}
