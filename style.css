@@ -12,10 +12,7 @@ body {
     list-style: none;
 }
 
-#blank-page {
-    height: calc(100vh - 50px);
-}
-
+#blank-page,
 .container {
     height: calc(100vh - 50px);
 }
@@ -36,19 +33,14 @@ embed {
     position: relative;
 }
 
-.title-and-holder {
+.title-and-holder,
+.nav-menu {
     display: flex;
     align-items: center;
 }
 
 .title-and-holder select {
     margin-left: 2rem;
-}
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    padding: 0;
 }
 
 .nav-item {
@@ -68,7 +60,7 @@ label {
 }
 
 audio {
-    visibility:hidden;
+    visibility: hidden;
     height: 25px;
     background-color: #483D8B;
     border: none;
@@ -99,20 +91,13 @@ input[type="file"] {
     width: 25px;
     height: 25px;
     position: absolute;
+    right: 0;
 }
 
-.videoContainer {
-    display: none;
-}
-
+.videoContainer,
 video {
-    position: absolute;
+    position: fixed;
     width: 100%;
     inset: 0;
     margin: auto;
-}
-
-.closeVideoBtn {
-    position: absolute;
-    right: 0;
 }

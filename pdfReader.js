@@ -1,7 +1,7 @@
 // 3º Aqui carregamos o arquivo PDF que vai ser embedded na página.
 const fileInputPDF = document.getElementById('pdf-file');
 const pdfObject = document.getElementById('pdf-object');
-let pdfCounter = 1; // Contador para gerar ID's unicos
+let pdfCounter = 1; // Contador para gerar ID's únicos
 let dropdownListCreated = false; // Checagem para saber se a lista dropdown está vazia.
 
 // Usa-se um mesmo eventListener com uma callback function, criando uma URL para o arquivo PDF
@@ -14,7 +14,7 @@ fileInputPDF.addEventListener('change', function(event) {
 
     // Com o arquivo carregado, o JavaScript cria um elemento "embed" no qual o SRC vai ser o arquivo PDF. Por fim, fazemos um append desse embed ao div com classe ".container"
     const embedPDF = document.createElement("embed");
-    const embedId = "pdf-embed-" + pdfCounter; // Aqui um ID unico é gerado
+    const embedId = "pdf-embed-" + pdfCounter; // Aqui um ID único é gerado
     embedPDF.setAttribute("id", embedId);
     embedPDF.setAttribute("src", fileURL);
     document.querySelector(".container").appendChild(embedPDF);
@@ -27,13 +27,7 @@ fileInputPDF.addEventListener('change', function(event) {
             const selectedPDF = event.target.value;
             const embedElements = document.querySelectorAll(".container embed");
             for (let i = 0; i < embedElements.length; i++) {
-                if (embedElements[i].id === selectedPDF) {
-                    // Mostra o PDF selecionado
-                    embedElements[i].style.display = "block";
-                } else {
-                    // Esconde os outros PDF
-                    embedElements[i].style.display = "none";
-                }
+                embedElements[i].style.display = (embedElements[i].id === selectedPDF) ? "block" : "none";
             }
         });
 
@@ -57,14 +51,10 @@ fileInputPDF.addEventListener('change', function(event) {
     // Adiciona a nova <option> dentro da dropdownlist
     dropdownList.appendChild(option);
 
-    pdfCounter++; // aumenta a contagem para o próximo id unico
+    pdfCounter++; // aumenta a contagem para o próximo id único
 });
 
 function togglePDF() {
-    let whiteboard = document.getElementById("blank-page")
-    if (whiteboard.style.display === "none") {
-      whiteboard.style.display = "block"
-    } else {
-      whiteboard.style.display = "none"
-    }
-  }
+    const whiteboard = document.getElementById("blank-page");
+    whiteboard.style.display = (whiteboard.style.display === "none") ? "block" : "none";
+}
